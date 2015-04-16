@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<p class="comments">FHIR toolbox is a collection of libraries, services and tools for FHIR</p>
+
+{% for category in site.categories %}
+<h3>{{ category | first }}</h3>
+<ul>
+  {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span> {{post.tags}}</span>
+      </li>
+  {% endfor %}
+</ul>
+</li>
+{% endfor %}
+
+<br/>
+<h3>Take colors from <a href="http://eclipsecolorthemes.org/?view=theme&id=366">this theme</a><h3>
+
+<!-- <div class="home"> -->
+
+<!--   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+<!-- </div> -->
